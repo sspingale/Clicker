@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Camerafavicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="head">
+        <button class="togglesidebar">&#x229F;</button>
+        <div class="heading">Clicker</div><br>
+    </div>
+    <div class="collapsed" id="sidebar">
+        <div class="header">
+            <header>Filters</header>
+            <button class="closebtn">&times;</button>
+        </div>
+        <div class="filters">
+            <ul>
+                <li id="normal">Normal</li>
+                <li id="random">Random Filter</li>
+                <li id="grey">Grey</li>
+                <li id="invert">Invert</li>
+                <li id="bright">Bright</li>
+                <li id="reddish">Reddish</li>
+                <li id="truered">TrueRed View</li>
+                <li id="bluish">Bluish</li>
+                <li id="trueblue">TrueBlue View</li>
+                <li id="greenish">Greenish</li>
+                <li id="truegreen">TrueGreen View</li>
+                <li id="mirror">Mirror View</li>
+                <li id="leftmirror">Left Mirror</li>
+                <li id="diagonalleftmirror">Diagonal Left Mirror</li>
+                <li id="rightmirror">Right Mirror</li>
+                <li id="bottommirror">Bottom Mirror</li>
+                <li id="topmirror">Top Mirror</li>
+                <li id="upsidedown">UpsideDown View</li>
+                <li id="upsidedownmirror">UpsideDown Mirror View</li>
+                <li id="pentagonal">Pentagonal</li>
+                <li id="quad">Quad Mirror</li>
+                <li id="grid2">Grid (2x2)</li>
+                <li id="grid3">Grid (3x3)</li>
+                <li id="grid4">Grid (4x4)</li>
+                <li id="gridvariant">Grid Variant</li>
+                <li id="xray">XRay View</li>
+                <li id="diagonal">Diagonal View</li>
+                <li id="oldview">Old View</li>
+                <li id="oldtvglitch">Old TV Glitch</li>
+                <li id="twin">Twin Color</li>
+                <li id="blackandwhite">Black And White</li>
+                <li id="invertblackandwhite">Invert Black And White</li>
+                <li id="whiteandblack">White And Black</li>
+                <li id="invertwhiteandblack">Invert White And Black</li>
+                <li id="cartoon">Cartoon View</li>
+                <li id="lightcartoon">Light Cartoon View</li>
+                <li id="alien">Alien View</li>
+                <li id="switch">Switch View</li>
+                <li id="switchsplit">Switch Split View</li>
+                <li id="hazydays">Hazy Days</li>
+                <li id="rainbow">Rainbow</li>
+                <li id="crayon">Crayon Color</li>
+                <li id="multicolorgrid">Multi Color Grid</li>
+                <li id="verticalrainbow">Vertical Rainbow</li>
+                <li id="reverseview">Reverse View</li>
+                <li id="snowfall">Snow Fall</li>
+                <li id="filmstrip">FilmStrip</li>
+                <li id="delaytime">Delay Time</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <!-- <button title="Toggle sidebar" class="showsidebar">&#x229F;</button> -->
+        <canvas></canvas>
+    </div>
+    <div class="buttons">
+        <input type="button" value="Click Click Click" id="cameraon">
+        <input type="button" value="Take Image" id="takeimage">
+        <input type="button" value="Turn Off Camera" id="cameraoff">
+        <!-- <input type="button" value="Change to Grid View" id="viewchange"> -->
+    </div><br>
+</body>
+    <script type="module" src="./script.js"></script>
+</html>

@@ -1,0 +1,325 @@
+body{
+    background: linear-gradient(45deg,violet,indigo,blue,green,yellow,orange,red);
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header{
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+div{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.container{
+    width: 85%;    
+    margin: auto;
+    padding: 5px;
+}
+
+.filters{
+    display: flex;
+    padding: 2px 15px;
+    font-size: 20px;
+    /* text-align: left; */
+    width: 70%;
+    height: 81%;
+    /* justify-content: center; */
+    text-transform: capitalize;
+    overflow-y: auto;
+    align-items: none;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgb(79, 78, 78);
+    color: white;
+}
+
+#takeimage{
+    cursor: pointer;
+}
+
+#cameraon, #pausecamera, #cameraoff , #resumecamera , #takeimage , #viewchange{
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 12px;
+    background-color: limegreen;
+    color: white;
+    margin: 0px 150px;
+}
+
+#cameraon{
+    margin-top: 150px;
+}
+
+#cameraon:hover , #cameraoff:hover , #pausecamera:hover, #resumecamera:hover, #takeimage:hover , #viewchange:hover{
+    background-color: lime;
+    transform: scale(1.1);
+}
+
+.closebtn{
+    padding: 5px;
+    float:right;
+    background-color: rgb(154, 76, 228);
+    color: white;
+}
+
+.closebtn:hover{
+    background-color: blueviolet;
+}
+
+.collapsed{
+    background-color: black;
+    color: white;
+}
+
+.togglesidebar{
+    border: 1px solid black;
+}
+
+.togglesidebar:hover{
+    background-color: skyblue;
+    color: white;
+}
+
+.showsidebar{
+    position: absolute;
+    left: 1%;
+    top: 0.5%;
+    padding: 5px;
+}
+
+#sidebar{
+    position: absolute;
+    background-color: rgb(154, 76, 228);
+    width: 18%;
+    height: 100%;
+    left: -50%;
+    top: 0%;
+}
+
+.filters ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.filters ul>li{
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(154, 76, 228);
+    color: black;
+    padding: 5px 8px;
+    border: none;
+    margin: 8px 0px;
+}
+
+.filters ul>li:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.showsidebar{
+    animation: sidebartoggle 500ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sidebartoggle {
+    0%{
+        left: -50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.hidesidebar{
+    animation: toggle 500ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toggle {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -50%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 770px){
+    #sidebar{
+        position: absolute;
+        background-color: rgb(154, 76, 228);
+        width: 23%;
+        height: 100%;
+        left: -50%;
+        top: 0%;
+    }
+    
+    .filters ul>li{
+        width: 100%;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: rgb(154, 76, 228);
+        color: black;
+        padding: 5px;
+        border: none;
+        margin: 8px 0px;
+    }
+}
+
+@media screen and (max-width: 1025px) and (min-width: 770px) {
+    #sidebar{
+        position: absolute;
+        background-color: rgb(154, 76, 228);
+        width: 25%;
+        height: 100%;
+        left: -50%;
+        top: 0%;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-width: 376px) {
+    #sidebar{
+        position: absolute;
+        background-color: rgb(154, 76, 228);
+        width: 50%;
+        height: 120%;
+        left: -50%;
+        top: 0%;
+    }
+    
+    .showsidebar{
+        animation: sidebartoggle 500ms;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes sidebartoggle {
+        0%{
+            left: -80%;
+        }
+        100%{
+            left: 0%;
+        }
+    }
+    
+    .hidesidebar{
+        animation: toggle 500ms;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes toggle {
+        0%{
+            left: 0%;
+        }
+        100%{
+            left: -80%;
+        }
+    }
+    
+    input[type=button]{
+        padding: 15px;
+        font-size: 20px;
+        margin: 20px;
+        border: none;
+        background-color: white;
+    }
+    
+}
+
+@media screen and (max-width: 376px){
+    #sidebar{
+        position: absolute;
+        background-color: rgb(154, 76, 228);
+        width: 80%;
+        height: 160%;
+        left: -50%;
+        top: 0%;
+    }
+
+    #cameraon{
+        margin-top: 300px;
+    }
+    
+    .showsidebar{
+        animation: sidebartoggle 500ms;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes sidebartoggle {
+        0%{
+            left: -100%;
+        }
+        100%{
+            left: 0%;
+        }
+    }
+    
+    .hidesidebar{
+        animation: toggle 500ms;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes toggle {
+        0%{
+            left: 0%;
+        }
+        100%{
+            left: -100%;
+        }
+    }
+
+    input[type=button]{
+        padding: 15px;
+        font-size: 20px;
+        margin: 20px;
+        border: none;
+        background-color: white;
+    }
+}
